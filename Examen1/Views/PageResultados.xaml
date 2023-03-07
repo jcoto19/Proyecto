@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1.Views.PageResultados">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightGray">
+                       
+            <Label Text="Contactos Guardados"
+                    FontSize="30" TextColor="Black"/>
+            <CollectionView x:Name="ListaContactos"
+                            Margin="15"
+                            SelectionMode="Single"
+                            SelectionChanged="ListaContactos_SelectionChanged"
+                            BackgroundColor="White">
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+
+                            <Label HorizontalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Id: " FontSize="20" />
+                                        <Span Text="{Binding id}" FontSize="20"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label HorizontalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Nombre: " FontSize="20" />
+                                        <Span Text="{Binding Nombre}" FontSize="20"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label HorizontalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Apellido: " FontSize="20" />
+                                        <Span Text="{Binding Apellidos}" FontSize="20"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label HorizontalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Edad: " FontSize="20" />
+                                        <Span Text="{Binding Edad}" FontSize="20"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label HorizontalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Pais: " FontSize="20" />
+                                        <Span Text="{Binding Pais}" FontSize="20"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label HorizontalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Nota: " FontSize="20" />
+                                        <Span Text="{Binding Nota}" FontSize="20"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label> 
+
+                            <Label BackgroundColor="Gray">
+                                
+                            </Label>
+                            
+                        </StackLayout>
+                    </DataTemplate>                     
+                    
+                </CollectionView.ItemTemplate>
+                
+            </CollectionView>
+                            
+                            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

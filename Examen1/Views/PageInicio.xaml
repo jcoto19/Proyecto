@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1.Views.PageInicio">
+    
+    
+    <ContentPage.Content>         
+        
+        <StackLayout BackgroundColor="White">
+            <Image Source="Logo_oficial_UCENM.png">
+
+            </Image>
+            <Label Text="¡Bienvenido!" FontSize="50" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+
+            <Button x:Name="AgregarContacto" Text="Agregar Contacto" Clicked="AgregarContacto_Clicked"
+                    Margin="10,10,10,0"
+                    BackgroundColor="Green"/>
+
+            <Button x:Name="DatosGuardados" Text="Ver Datos Guardados" Clicked="ToolbarItem_DatosGuardados"
+                    Margin="10,10,10,0"
+                    BackgroundColor="Green"/>
+
+
+        </StackLayout>
+        
+        
+    </ContentPage.Content>
+</ContentPage>

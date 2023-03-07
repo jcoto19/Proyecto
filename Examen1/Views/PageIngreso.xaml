@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1.Views.PageIngreso">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+
+            <Entry x:Name="txtNombres"
+                   Placeholder="Nombres"
+                   Keyboard="Text"
+                   TextColor="Black"
+                   Margin="10,10,10,0"/>
+
+            <Entry x:Name="txtApellidos"
+                   Placeholder="Apellidos"
+                   Keyboard="Text"
+                   TextColor="Black"
+                   Margin="10,10,10,0"/>
+
+            <Entry x:Name="txtEdad"
+                   Placeholder="Edad"
+                   Keyboard="Numeric"
+                   TextColor="Black"
+                   Margin="10,10,10,0"/>
+
+            <Picker x:Name="cbPais"
+                    Title="Seleccione País"
+                    TitleColor="Black"
+                    Margin="10,10,10,0">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Guatemala (502)</x:String>
+                        <x:String>El Salvador (503)</x:String>
+                        <x:String>Honduras (504)</x:String>
+                        <x:String>Nicaragua (505)</x:String>
+                        <x:String>Costa Rica (506)</x:String>
+                        </x:Array>
+                </Picker.ItemsSource>                
+            </Picker>
+
+            <Entry x:Name="txtNota"
+                   Placeholder="Notas"
+                   Keyboard="Text"
+                   TextColor="Black"
+                   HeightRequest="150"
+                   Margin="10,10,10,0"/>
+
+            <Entry x:Name="txtLatitud"
+                   Placeholder="Latitud"
+                   Keyboard="Text"
+                   Margin="10,10,10,0"
+                   IsEnabled="False"/>
+
+            <Entry x:Name="txtLongitud"
+                   Placeholder="Longitud"
+                   Keyboard="Text"
+                   Margin="10,10,10,0"
+                   IsEnabled="False"/>
+            
+            <Button x:Name="btnGPS" Text="Ver GPS" Clicked="cargarGPS_Clicked"
+                    Margin="10,10,10,0"
+                    BackgroundColor="Green">                    
+                
+            </Button>
+            <Button x:Name="btnGuardarContacto" Text="Guardar Contacto" Clicked="btnGuardarContacto_Clicked"
+                    Margin="10,10,10,0"
+                    BackgroundColor="Green"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
