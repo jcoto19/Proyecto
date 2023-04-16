@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1.Views.PageResultadoSitios">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#98C1D9">
+            
+            <Label Text="Sitios Guardados"
+                    FontSize="30" TextColor="White"/>
+
+            <ListView x:Name="ListaSitios"
+                      BackgroundColor="#98C1D9" ItemTapped="OnItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Sitio}" TextColor="White" VerticalOptions="CenterAndExpand"/>
+                                <Label Text="|" TextColor="White" VerticalOptions="CenterAndExpand"/>
+                                <Label Text="{Binding Pais}" TextColor="White" VerticalOptions="CenterAndExpand"/>
+
+                            </StackLayout>                            
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>               
+
+            </ListView>
+            
+            <Button x:Name="Editar" Text="Editar" IsEnabled="False"/>
+            <Button x:Name="Borrar" Text="Borrar" IsEnabled="False"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

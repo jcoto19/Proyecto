@@ -39,7 +39,17 @@ namespace Examen1.Views
             Navigation.PushAsync(pageContacto);
         }
 
-        
+        private void SitiosGuardado_Clicked(object sender, EventArgs e)
+        {
+            var pageSitios = new Views.PageSitios();
+            Navigation.PushAsync(pageSitios);
+        }
 
+        private void VerSitios_Clicked(object sender, EventArgs e)
+        {
+            var pageVerSitios = new Views.PageResultadoSitios();
+            Navigation.PushAsync(pageVerSitios);
+            
+        }
     }
 }

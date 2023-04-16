@@ -6,7 +6,7 @@
     
     <ContentPage.Content>         
         
-        <StackLayout BackgroundColor="White">
+        <StackLayout BackgroundColor="#E0FBFC">
             <Image Source="Logo_oficial_UCENM.png">
 
             </Image>
@@ -14,14 +14,21 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"/>
 
-            <Button x:Name="AgregarContacto" Text="Agregar Contacto" Clicked="AgregarContacto_Clicked"
+            <Button x:Name="AgregarContacto" Text="Agregar Contacto" Clicked="AgregarContacto_Clicked" TextColor="White"
                     Margin="10,10,10,0"
-                    BackgroundColor="Green"/>
+                    BackgroundColor="#98C1D9"/>
 
-            <Button x:Name="DatosGuardados" Text="Ver Datos Guardados" Clicked="ToolbarItem_DatosGuardados"
+            <Button x:Name="DatosGuardados" Text="Agenda" Clicked="ToolbarItem_DatosGuardados" TextColor="White"
                     Margin="10,10,10,0"
-                    BackgroundColor="Green"/>
+                    BackgroundColor="#98C1D9"/>
 
+            <Button x:Name="GuardarSitios" Text="Guardar Sitio Visitado" Clicked="SitiosGuardado_Clicked" TextColor="White"
+                    Margin="10,10,10,0"
+                    BackgroundColor="#98C1D9"/>
+
+            <Button x:Name="SitiosGuardado" Text="Ver Sitios Visitados" Clicked="VerSitios_Clicked" TextColor="White"
+                    Margin="10,10,10,0"
+                    BackgroundColor="#98C1D9"/>
 
         </StackLayout>
         

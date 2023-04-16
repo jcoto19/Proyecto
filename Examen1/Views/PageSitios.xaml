@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Examen1.Views.PageIngreso">
+             x:Class="Examen1.Views.PageSitios">
     <ContentPage.Content>
         <ScrollView>
         <StackLayout BackgroundColor="#E0FBFC">
-            
-            <Label Text="Registrar Contactos"
-                    FontSize="30" TextColor="Black"/>            
+
+            <Label Text="Registrar Sitios Visitados"
+                    FontSize="30" TextColor="Black"/>
             
             <StackLayout Orientation="Horizontal">
-                
+
                 <Button x:Name="btnCamara" Text="Cámara" Clicked="btnCamara_Clicked" 
                     Margin="10,10,10,0"
                     BackgroundColor="#3D5A80"
@@ -22,26 +22,25 @@
                     TextColor="White"/>
             </StackLayout>
 
-           
+            <Image x:Name="imgFoto" Margin="10"/>
 
-            <Entry x:Name="txtNombres"
-                   Placeholder="Nombres"
+            <Entry x:Name="txtSitio"
+                   Placeholder="SitioVisitado"
                    Keyboard="Text"                   
                    TextColor="Black"
                    Margin="10,10,10,0"/>
 
-            <Entry x:Name="txtTelefono"
-                   Placeholder="Telefono"
-                   Keyboard="Text"                   
-                   TextColor="Black"
-                   Margin="10,10,10,0"/>
+            <Entry x:Name="txtLatitud"
+                   Placeholder="Latitud"
+                   Keyboard="Text"
+                   Margin="10,10,10,0"
+                   IsEnabled="False"/>
 
-
-            <Entry x:Name="txtEdad"
-                   Placeholder="Edad"
-                   Keyboard="Numeric"
-                   TextColor="Black"
-                   Margin="10,10,10,0"/>
+            <Entry x:Name="txtLongitud"
+                   Placeholder="Longitud"
+                   Keyboard="Text"
+                   Margin="10,10,10,0"
+                   IsEnabled="False"/>
 
             <Picker x:Name="cbPais"
                     Title="Seleccione País"
@@ -54,8 +53,8 @@
                         <x:String>Honduras (504)</x:String>
                         <x:String>Nicaragua (505)</x:String>
                         <x:String>Costa Rica (506)</x:String>
-                        </x:Array>
-                </Picker.ItemsSource>                
+                    </x:Array>
+                </Picker.ItemsSource>
             </Picker>
 
             <Entry x:Name="txtNota"
@@ -63,14 +62,20 @@
                    Keyboard="Text"
                    TextColor="Black"
                    HeightRequest="150"
-                   Margin="10,10,10,0"/>                              
-                            
-            <Button x:Name="btnGuardarContacto" Text="Guardar Contacto" Clicked="btnGuardarContacto_Clicked" 
+                   Margin="10,10,10,0"/>
+
+            <Button x:Name="btnGuardarSitio" Text="Guardar Sitio" Clicked="btnGuardarSitio_Clicked" 
                     Margin="10,10,10,0"
                     BackgroundColor="#3D5A80"
                     TextColor="White"/>
 
-            <Image x:Name="imgFoto" Margin="10"/>
+            <Button x:Name="btnVerSitio" Text="Ver Sitio" Clicked="VerSitio_Clicked" 
+                    Margin="10,10,10,0"
+                    BackgroundColor="#3D5A80"
+                    TextColor="White"/>
+
+
+
 
 
         </StackLayout>

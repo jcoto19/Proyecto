@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Examen1.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -7,7 +8,6 @@ using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
-using Xamarin.Forms.Xaml;
 using Xamarin.Forms.Xaml;
 
 namespace Examen1.Views
@@ -20,11 +20,18 @@ namespace Examen1.Views
             InitializeComponent();
         }
 
+        public PageMapas(double latitud, double longitud) : this()
+        {
+            var posicion = new Position(latitud, longitud);
+            mapa.MoveToRegion(MapSpan.FromCenterAndRadius(posicion, Distance.FromKilometers(1)));
+        }
+
         protected override async void OnAppearing()
         {
             base.OnAppearing();
             try
             {
+                
                 var location = await Geolocation.GetLocationAsync();
 
                 if (location != null)

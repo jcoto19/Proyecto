@@ -9,6 +9,7 @@ namespace Examen1.Controllers
 {
     public class ContactosControllers
     {
+        
         readonly SQLiteAsyncConnection conexion;
 
         public ContactosControllers(string dbpath)
@@ -42,6 +43,11 @@ namespace Examen1.Controllers
         public Task<int> DeleteContacto(Contactos contacto)
         {
             return conexion.DeleteAsync(contacto);
+        }
+
+        public async Task<List<Contactos>> GetContactosAsync()
+        {
+            return await conexion.Table<Contactos>().ToListAsync();
         }
     }
 }

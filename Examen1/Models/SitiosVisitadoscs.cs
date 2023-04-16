@@ -1,26 +1,20 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using SQLite;
 
 namespace Examen1.Models
 {
-    public class Contactos
+    public class SitiosVisitadoscs
     {
         [PrimaryKey, AutoIncrement]
         public int id { get; set; }
 
         [MaxLength(100)]
-        public string Nombre { get; set; }
+        public string Sitio { get; set; }
 
-        public string Foto { get; set; }
-
-        [MaxLength(100)]
-        public string Telefono { get; set; }
-
-        
-        public int Edad { get; set; }
-
+        public byte[] FotoLugar { get; set; }
+       
         [MaxLength(100)]
         public string Pais { get; set; }
 
@@ -28,7 +22,7 @@ namespace Examen1.Models
         public string Nota { get; set; }
 
         public double latitud { get; set; }
-        public double longitud { get; set;}
+        public double longitud { get; set; }
 
     }
 }
